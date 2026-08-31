@@ -1,54 +1,52 @@
 /**
- * EXAMPLEpredefines.h - pcannonProjectStandards
- * Predefines for C and C++ projects
+ * @file ETRpredefines.h
+ * @brief Version macros, string helpers, and platform detection (pcannonProjectStandards).
+ *
  * STD Information: 20250723 - 1.0S
  */
 
-#ifndef INCLUDE_C_EXAMPLEPREDEFINES_H_
-#define INCLUDE_C_EXAMPLEPREDEFINES_H_
-
-// Project setup
-#define EXAMPLE_DEFAULT_C_STD			201112L
+#ifndef INCLUDE_C_ETRPREDEFINES_H_
+#define INCLUDE_C_ETRPREDEFINES_H_
 
 // Versioning
-#define EXAMPLE_VERSION_MAJOR            0
-#define EXAMPLE_VERSION_MINOR            0
-#define EXAMPLE_VERSION_PATCH            1
+#define ETR_VERSION_MAJOR            1
+#define ETR_VERSION_MINOR            0
+#define ETR_VERSION_PATCH            0
 
-#define EXAMPLE_VERSION_STD              0
+#define ETR_VERSION_STD              20260831
 
 // Version states:
 // * dev
 // * beta
 // * build
-#define EXAMPLE_VERSION_STATE          "dev"
+#define ETR_VERSION_STATE          "build"
 
-#define EXAMPLE_VERSION                ((EXAMPLE_VERSION_MAJOR<<16)|(EXAMPLE_VERSION_MINOR<<8)|(EXAMPLE_VERSION_PATCH)|(EXAMPLE_VERSION_STATE << 24))
+#define ETR_VERSION                ((ETR_VERSION_MAJOR<<16)|(ETR_VERSION_MINOR<<8)|(ETR_VERSION_PATCH)|(ETR_VERSION_STATE << 24))
 
-#define EXAMPLE_VERSION_CHECK(EXAMPLE_VERSION_MAJOR, EXAMPLE_VERSION_MINOR, EXAMPLE_VERSION_PATCH, EXAMPLE_VERSION_STATE) \
-    (((EXAMPLE_VERSION_MAJOR)<<16)|((EXAMPLE_VERSION_MINOR)<<8)|(EXAMPLE_VERSION_PATCH)|((EXAMPLE_VERSION_STATE) << 24))
+#define ETR_VERSION_CHECK(ETR_VERSION_MAJOR, ETR_VERSION_MINOR, ETR_VERSION_PATCH, ETR_VERSION_STATE) \
+    (((ETR_VERSION_MAJOR)<<16)|((ETR_VERSION_MINOR)<<8)|(ETR_VERSION_PATCH)|((ETR_VERSION_STATE) << 24))
 
 // Macro utils
-#define EXAMPLE_STRINGIFY(x) #x
-#define EXAMPLE_TOSTRING(x) EXAMPLE_STRINGIFY(x)
+#define ETR_STRINGIFY(x) #x
+#define ETR_TOSTRING(x) ETR_STRINGIFY(x)
 
-#ifndef EXAMPLE_DEV
-#   define EXAMPLE_DEV      1
+#ifndef ETR_DEV
+#   define ETR_DEV      1
 #endif
 
 #if defined(WIN32) || defined(_WIN32)
-#	define EXAMPLE_OS_WIN32
+#	define ETR_OS_WIN32
 #elif defined(__APPLE__) || defined(__MACH__) || defined(Macintosh)
-#	define EXAMPLE_OS_MACOS
+#	define ETR_OS_MACOS
 #elif defined(__linux__)
-#	define EXAMPLE_OS_UNIX_LINUX
+#	define ETR_OS_UNIX_LINUX
 #elif defined(__unix) || defined(__unix__)
-#	define EXAMPLE_OS_UNIX
+#	define ETR_OS_UNIX
 #elif defined(__FreeBSD__)
-#	define EXAMPLE_OS_FREEBSD
+#	define ETR_OS_FREEBSD
 #else
 #	error "Current platform might not supported"
 #endif // defined(WIN32) // Platform check
 
-#endif  // INCLUDE_C_EXAMPLEPREDEFINES_H_
+#endif  // INCLUDE_C_ETRPREDEFINES_H_
 

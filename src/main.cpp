@@ -1,3 +1,8 @@
+/**
+ * @file main.cpp
+ * @brief Demo executable comparing printf() vs write() timing with Chronometer.
+ */
+
 #include "exec_time_record/chronometer.hpp"
 #include "cpp-time-utils/inc/Sleep.hpp"
 

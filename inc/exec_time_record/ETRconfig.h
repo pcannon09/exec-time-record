@@ -1,3 +1,8 @@
+/**
+ * @file ETRconfig.h
+ * @brief Build-time / platform configuration helpers for exec-time-record.
+ */
+
 #ifndef INCLUDE_C_ETR_CONFIGCONFIG_H_
 #define INCLUDE_C_ETR_CONFIGCONFIG_H_
 

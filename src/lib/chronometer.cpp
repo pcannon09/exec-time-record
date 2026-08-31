@@ -1,3 +1,8 @@
+/**
+ * @file chronometer.cpp
+ * @brief Implementation of etr::Chronometer.
+ */
+
 #include "exec_time_record/chronometer.hpp"
 
 #include "cpp-time-utils/inc/Sleep.hpp"
