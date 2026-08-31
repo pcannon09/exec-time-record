@@ -1,0 +1,21 @@
+#ifndef INCLUDE_C_ETR_CONFIGCONFIG_H_
+#define INCLUDE_C_ETR_CONFIGCONFIG_H_
+
+#ifdef __cplusplus
+# 	define ETR_CONFIG_CPP_OPEN 		extern "C" {
+# 	define ETR_CONFIG_CPP_CLOSE 		}
+#else
+# 	define ETR_CONFIG_CPP_OPEN
+# 	define ETR_CONFIG_CPP_CLOSE
+#endif
+
+ETR_CONFIG_CPP_OPEN
+
+
+
+ETR_CONFIG_CPP_CLOSE 
+
+#undef ETR_CONFIG_CPP_OPEN
+#undef ETR_CONFIG_CPP_CLOSE
+
+#endif  // INCLUDE_C_ETR_CONFIGCONFIG_H_

@@ -1,0 +1,32 @@
+# Generated
+.private/*
+
+build/
+.cache/
+docs/
+
+tmp/
+
+__cmake_systeminformation/
+
+# Other files
+*.ttf
+*.swp
+*.bak
+*.tmp
+*.log
+
+*.o
+*.obj
+*.d
+
+# Markers and examples
+.root_dir
+*.template*
+
+# OS
+.DS_Store
+
+# DO NOT ignore the following
+!.private/project.json
+
